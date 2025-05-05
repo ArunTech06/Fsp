@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>JS Arithmetic Form</title> 
+</head> 
+<body> 
+<h1>Arithmetic Calculator</h1> 
+<button onclick="getInput()">Enter Numbers</button> 
+<div id="output"></div> 
+<script> 
+function getInput() { 
+      let num1 = prompt("Enter the first number:"); 
+      let num2 = prompt("Enter the second number:"); 
+ 
+      // Validation 
+      if (isNaN(num1) || isNaN(num2) || num1 === '' || num2 === '') { 
+        document.getElementById("output").innerHTML = "<p>Please enter valid numbers.</p>";
+        return; 
+      } 
+ 
+      num1 = parseFloat(num1); 
+      num2 = parseFloat(num2); 
+ 
+      // Arithmetic 
+      let sum = num1 + num2; 
+      let diff = num1 - num2; 
+      let prod = num1 * num2; 
+      let quot = num2 !== 0 ? (num1 / num2).toFixed(2) : "undefined"; 
+ 
+      // Output 
+      document.getElementById("output").innerHTML = `
+        <h2>Results:</h2> 
+        <ul> 
+          <li>Sum: ${sum}</li> 
+          <li>Difference: ${diff}</li> 
+          <li>Product: ${prod}</li> 
+          <li>Quotient: ${quot}</li> 
+        </ul> 
+      `; 
+    } 
+  </script> 
+</body> 
+</html> 

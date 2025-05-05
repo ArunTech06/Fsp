@@ -1,0 +1,42 @@
+body { 
+    margin: 0; 
+    font-family: sans-serif; 
+    } 
+    header { 
+    text-align: center; 
+    background: linear-gradient(to right, #007BFF, #00C6FF); 
+    color: white; 
+    padding: 20px; 
+    } 
+    .portfolio { 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 20px; 
+    flex-wrap: wrap; 
+    } 
+    .card { 
+    width: 30%; 
+    background: #fff; 
+    margin: 10px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    border: 2px solid #eee; 
+    transition: transform 0.3s ease; 
+    position: relative; 
+    top: 0; 
+    } 
+    .card:hover { 
+    transform: scale(1.05); 
+    top: -5px; 
+    } 
+    footer { 
+    background: #222; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px; 
+    } 
+    @media (max-width: 768px) { 
+    .card { 
+    width: 100%; 
+    } 
+    } 

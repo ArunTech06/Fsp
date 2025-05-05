@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Advanced Aesthetic Effects</title> 
+    <style> 
+        /* Basic CSS Reset */ 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+ 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f2f2f2; 
+            color: #333; 
+            display: flex; 
+
+ 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+        } 
+ 
+        .container { 
+            width: 800px; 
+            padding: 40px; 
+            background-color: #fff; 
+            border-radius: 20px; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+        } 
+ 
+        h1 { 
+            text-align: center; 
+            margin-bottom: 20px; 
+            color: #333; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+        } 
+ 
+        p { 
+            text-align: justify; 
+            line-height: 1.6; 
+            margin-bottom: 20px; 
+        } 
+ 
+        .button { 
+            display: inline-block; 
+            background-color: #4CAF50; 
+            border: none; 
+            color: white; 
+            padding: 10px 20px; 
+            text-align: center; 
+            text-decoration: none; 
+ 
+            display: inline-block; 
+            font-size: 16px; 
+            margin: 4px 2px; 
+            transition-duration: 0.4s; 
+            cursor: pointer; 
+            border-radius: 8px; 
+        } 
+ 
+        .button:hover { 
+            background-color: red; 
+        } 
+ 
+        /* Advanced Aesthetic Effects */ 
+        .button_effect { 
+            position: relative; 
+            overflow: hidden; 
+        } 
+ 
+        .button_effect:before { 
+            content: ""; 
+            position: absolute; 
+            background: #7db9e8; 
+            width: 0; 
+            height: 100%; 
+            left: 50%; 
+            top: 0; 
+            z-index: -1; 
+            transition: all 0.3s ease-out; 
+        } 
+ 
+        .button.effect:hover:before { 
+            width: 100%; 
+            left: 0; 
+        } 
+    </style> 
+</head> 
+<body> 
+<div class="container"> 
+<h1>Advanced Aesthetic Effects</h1> 
+<p>This is an example webpage showcasing advanced aesthetic effects using 
+CSS3.</p> 
+<a href="#" class="button">Normal Button</a> 
+<a href="#" class="button_effect">Button with Effect</a> 
+</div> 
+</body> 
+</html> 

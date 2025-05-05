@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Interactive Website with JavaScript</title> 
+    <style> 
+        /* Basic styles */ 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f0f0f0; 
+            text-align: center; 
+            padding: 20px; 
+
+        } 
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            background-color: #333; 
+            color: #fff; 
+            border: none; 
+            border-radius: 4px; 
+            margin: 10px; 
+        } 
+        button:hover { 
+            background-color: #555; 
+        } 
+        #output { 
+            margin-top: 20px; 
+        } 
+    </style> 
+</head> 
+<body> 
+ 
+<h1>Interactive Website with JavaScript</h1> 
+ 
+<button id="changeTextBtn">Change Text</button> 
+<button id="toggleColorBtn">Toggle Color</button> 
+<button id="resetBtn">Reset</button> 
+ 
+<div id="output">Click a button to interact</div> 
+ 
+<script> 
+    // Function to change the text in the output div 
+
+ 
+    function changeText() { 
+        document.getElementById('output').textContent = 'Text Changed!'; 
+    } 
+ 
+    // Function to toggle the background color of the output div 
+    function toggleColor() { 
+        var outputDiv = document.getElementById('output'); 
+        var currentColor = outputDiv.style.backgroundColor || 'white'; 
+        var newColor = currentColor === 'white' ? 'lightblue' : 'white'; 
+        outputDiv.style.backgroundColor = newColor; 
+    } 
+ 
+    // Function to reset the text and background color of the output div 
+    function reset() { 
+        document.getElementById('output').textContent = 'Click a button to interact'; 
+        document.getElementById('output').style.backgroundColor = 'white'; 
+    } 
+ 
+    // Event listeners for buttons 
+    document.getElementById('changeTextBtn').addEventListener('click', changeText); 
+    document.getElementById('toggleColorBtn').addEventListener('click', toggleColor); 
+    document.getElementById('resetBtn').addEventListener('click', reset); 
+</script> 
+ 
+</body> 
+</html> 
