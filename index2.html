@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arithmetic calculation</h1>
+    <button onclick="getInput()">Input</button>
+    <div id="output"></div>
+    <script>
+        function getInput(){
+            let num1=prompt("enter first number");
+            let num2=prompt("enter second number");
+            if(isNaN(num1)||isNaN(num2)||num1===""||num2===""){
+                document.getElementById("output").innerHTML="please enter valid input";
+                return;
+            }
+            num1=parseFloat(num1);
+            num2=parseFloat(num2);
+            let add=num1+num2;
+            let sub=num1-num2;
+            let mul=num1*num2;
+            let div=num1/num2;
+            document.getElementById("output").innerHTML=`<h2>result</h2><ul><li>add:${add}</li><li>subtraction:${sub}</li><li>mul:${mul}</li><li>division:${div}</li></ul>`;
+            }
+    </script>
+</body>
+</html>

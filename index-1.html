@@ -1,0 +1,36 @@
+   <!DOCTYPE html>
+<html>
+<head>
+  <title>Task Manager</title>
+</head>
+<body>
+  <h2>Task Manager</h2>
+
+  <!-- Input for task -->
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add Task</button>
+
+  <!-- Empty task list -->
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      // Step 1: Get the value from the input box
+      let taskInput = document.getElementById("taskInput").value;
+      
+
+      // Step 2: Create a new <li> element
+      let newTask = document.createElement("li");
+
+      // Step 3: Set the text of the new <li>
+      newTask.textContent = taskInput;
+
+      // Step 4: Append the <li> to the <ul>
+      document.getElementById("taskList").appendChild(newTask);
+
+      // Step 5: Clear the input box
+      taskInput.value = "";
+    }
+  </script>
+</body>
+</html>

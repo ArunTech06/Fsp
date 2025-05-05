@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Count</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #count {
+            font-size: 24px;
+            font-weight: bold;
+            color: crimson;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to our website!</h1>
+    <p>You are visitor number: <span id="count">1</span></p>
+
+    <!-- Refresh Button -->
+    <button onclick="location.reload()">Refresh Page</button>
+
+    <script>
+        // Check local storage for existing visitor count
+        let visitorCount = localStorage.getItem("visitorCount") || 0;
+
+        // Increment visitor count
+        visitorCount++;
+
+        // Update local storage
+        localStorage.setItem("visitorCount", visitorCount);
+
+        // Display updated count
+        document.getElementById("count").textcontent = visitorCount;
+    </script>
+</body>
+</html>

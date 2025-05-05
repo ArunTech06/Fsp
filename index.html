@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" required><br><br>
+
+        <label for="username">Name:</label>
+        <input type="text" id="username" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Store user data in local storage
+            localStorage.setItem("user_id", document.getElementById("user_id").value);
+            localStorage.setItem("username", document.getElementById("username").value);
+
+            // Redirect to home page
+            window.location.href = "home.html";
+        });
+    </script>
+</body>
+</html>

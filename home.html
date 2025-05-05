@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Our Website!</h1>
+    <p id="welcomeMessage"></p>
+
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        // Retrieve stored session data
+        let user_id = localStorage.getItem("user_id");
+        let username = localStorage.getItem("username");
+
+        // Check if user is logged in
+        if (!user_id || !username) {
+            window.location.href = "login.html"; // Redirect to login if not logged in
+        } else {
+            document.getElementById("welcomeMessage").textContent = "Welcome, " + username + "!";
+        }
+
+        function logout() {
+            localStorage.removeItem("user_id");
+            localStorage.removeItem("username");
+            window.location.href = "index.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>
